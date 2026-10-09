@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Pembelajaran: Zakat Perusahaan & Nilai Wajar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <h1>Aplikasi Modul Zakat Perusahaan</h1>
+        <p>Studi Kasus PT Amanah Niaga Sejahtera (ANS) - PSAK 113 vs Ketentuan BAZNAS</p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs-container">
+        <button class="tab-btn active" onclick="openTab('pendahuluan')">1. Pendahuluan</button>
+        <button class="tab-btn" onclick="openTab('teori')">2. Konsep & Teori</button>
+        <button class="tab-btn" onclick="openTab('perhitungan')">3. Rincian Perhitungan</button>
+        <button class="tab-btn" onclick="openTab('kuis')">4. Uji Kuis</button>
+    </div>
+
+    <!-- Tab 1: Pendahuluan -->
+    <div id="pendahuluan" class="tab-content active">
+        <div class="card">
+            <h2>Latar Belakang Kasus</h2>
+            <p>PT Amanah Niaga Sejahtera (ANS) adalah distributor grosir busana muslim. Menjelang akhir tahun buku 2025, terjadi perdebatan antara Manajemen Akuntansi, Direktur Keuangan, dan Dewan Pengawas Syariah (DPS) mengenai perhitungan Zakat Perusahaan.</p>
+            
+            <div class="explanation">
+                <div class="explanation-title">Pokok Permasalahan:</div>
+                <p>Bagian akuntansi menyusun perhitungan berdasarkan <strong>Biaya Historis (Nilai Buku SAK)</strong>, yang dinilai DPS kurang tepat. DPS merekomendasikan penggunaan <strong>Harga Pasar (Nilai Wajar)</strong> di akhir haul sesuai Pedoman BAZNAS, agar kewajiban zakat mencerminkan daya beli nyata <em>(current purchasing power)</em>.</p>
+            </div>
+            
+            <p>Tugas kita di dalam modul ini adalah memahami transisi dari angka Akuntansi Konvensional (SAK) menuju angka yang sesuai dengan Syariat Zakat berdasarkan <strong>PSAK 113 (Pengukuran Nilai Wajar)</strong> dan <strong>Pedoman BAZNAS</strong>.</p>
+        </div>
+    </div>
+
+    <!-- Tab 2: Teori -->
+    <div id="teori" class="tab-content">
+        <div class="card">
+            <h2>Pemahaman Konsep Kunci</h2>
+            
+            <div class="explanation">
+                <div class="explanation-title">1. Exit Price pada Emas Batangan</div>
+                <p>PSAK 113 mendefinisikan nilai wajar sebagai harga jual <em>(exit price)</em>. Bagi perusahaan, emas yang dimiliki sebagai cadangan dinilai dengan <strong>Harga Buyback (Rp 2,10 juta/gram)</strong> karena itulah harga riil yang akan diterima perusahaan jika emas tersebut dicairkan di akhir tahun.</p>
+            </div>
+
+            <div class="explanation">
+                <div class="explanation-title">2. Principal Market untuk Persediaan</div>
+                <p>Mengapa barang laku menggunakan Harga Grosir (Rp 2.400 juta) bukan Harga Eceran (Rp 2.900 juta)? Karena PT ANS beroperasi sebagai pedagang grosir. Sesuai PSAK 113, penilaian harus menggunakan harga di pasar utama <em>(principal market)</em> di mana entitas tersebut beroperasi.</p>
+            </div>
+
+            <div class="explanation">
+                <div class="explanation-title">3. Syarat Kepemilikan Sempurna (Milk Tam) pada Piutang</div>
+                <p>Dalam akuntansi konvensional, ada Cadangan Kerugian (ECL) sebesar Rp 60 juta (berbasis probabilitas). Namun, dalam fiqih zakat, piutang yang diragukan/pailit (Rp 150 juta) <strong>dikeluarkan secara mutlak</strong> dari dasar zakat karena perusahaan kehilangan penguasaan penuh <em>(qudrah 'ala al-tasarruf)</em>, sehingga tidak memenuhi syarat <em>Milk Tam</em>.</p>
+            </div>
+
+            <div class="explanation danger-box">
+                <div class="explanation-title">4. Kritik terhadap Konservatisme SAK</div>
+                <p>SAK menganut <em>Lower of Cost and Net Realizable Value</em>, di mana penurunan aset langsung diakui (rugi), namun potensi kenaikan (untung) belum diakui. Sifat asimetris ini <strong>merugikan Mustahik (Penerima Zakat)</strong> karena kenaikan riil aset barang dagangan jadi tidak terkena zakat. Karenanya, BAZNAS mewajibkan penggunaan nilai wajar.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 3: Perhitungan -->
+    <div id="perhitungan" class="tab-content">
+        <div class="card">
+            <h2>Langkah-langkah Penentuan Dasar Zakat (Wi'a)</h2>
+            <p>Berikut adalah penjabaran perolehan nilai Dasar Zakat sebesar <strong>Rp 4.267,00 Juta</strong>.</p>
+            
+            <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-dark);">A. Aset Lancar Wajib Zakat (Harta Zakat)</h3>
+            <div class="calc-step">
+                <div><span>Kas Kecil</span><span class="calc-note">Sesuai saldo fisik/buku</span></div>
+                <div>Rp 25,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Emas Batangan (50g)</span><span class="calc-note">50 gram x Rp 2,10 juta (Harga Buyback / Exit Price)</span></div>
+                <div>Rp 105,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Giro & Tabungan Syariah</span><span class="calc-note">Telah termasuk bagi hasil</span></div>
+                <div>Rp 850,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Giro Bank Konvensional</span><span class="calc-note">Rp 150 juta - Rp 6 juta (Purifikasi bunga dipisah ke dana kebajikan)</span></div>
+                <div>Rp 144,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Saham Syariah</span><span class="calc-note">Harga penutupan BEI (Level 1)</span></div>
+                <div>Rp 345,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Sukuk Korporasi</span><span class="calc-note">Nilai wajar kuotasi dealer OTC (Level 2)</span></div>
+                <div>Rp 490,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Piutang Bagi Hasil Sukuk</span><span class="calc-note">Akrual hak di akhir tahun</span></div>
+                <div>Rp 8,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Piutang Usaha</span><span class="calc-note">Rp 1.200 bruto - Rp 150 (Pailit/Non-Milk Tam)</span></div>
+                <div>Rp 1.050,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Persediaan Laku</span><span class="calc-note">Harga Grosir Pasar (Principal Market)</span></div>
+                <div>Rp 2.400,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Persediaan Lambat Laku</span><span class="calc-note">Nilai Realisasi Neto (Level 3)</span></div>
+                <div>Rp 220,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Uang Muka L/C Impor Barang</span><span class="calc-note">Barang untuk diperdagangkan</span></div>
+                <div>Rp 200,00</div>
+            </div>
+            <div class="calc-step calc-total">
+                <div>TOTAL ASET ZAKAT</div>
+                <div>Rp 5.837,00</div>
+            </div>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 0.5rem; color: #b91c1c;">B. Liabilitas Pengurang (Jangka Pendek)</h3>
+            <div class="calc-step">
+                <div><span>Utang Usaha</span><span class="calc-note">Kepada Pemasok (Jatuh tempo 60 hari)</span></div>
+                <div>Rp 900,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Beban Akrual</span><span class="calc-note">Gaji & Listrik Desember</span></div>
+                <div>Rp 120,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Utang PPh Badan</span><span class="calc-note">Disetor April tahun depan</span></div>
+                <div>Rp 150,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Pendapatan Diterima Dimuka</span><span class="calc-note">Kewajiban penyerahan barang (Februari)</span></div>
+                <div>Rp 100,00</div>
+            </div>
+            <div class="calc-step">
+                <div><span>Utang Pembiayaan Murabahah</span><span class="calc-note">Porsi jatuh tempo 12 bulan ke depan</span></div>
+                <div>Rp 300,00</div>
+            </div>
+            <div class="calc-step calc-total" style="border-top-color: #ef4444;">
+                <div>TOTAL PENGURANG</div>
+                <div>Rp 1.570,00</div>
+            </div>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 0.5rem; color: var(--primary-dark); font-size:1.3rem;">C. Rekapitulasi Zakat Akhir</h3>
+            <div class="explanation" style="background-color:#eff6ff; border-color:#3b82f6;">
+                <div class="calc-step" style="border:none; padding:0;">
+                    <div style="font-weight:600; font-size:1.1rem;">Dasar Zakat (Wi'a) = Aset (5.837) - Liabilitas (1.570)</div>
+                    <div style="font-weight:700; font-size:1.2rem; color:var(--primary-dark);">Rp 4.267,00 Juta</div>
+                </div>
+            </div>
+            <div class="calc-step">
+                <div><span>Tarif Zakat Haul Masehi</span><span class="calc-note">Penyesuaian 365 hari vs 354 hari hijriah</span></div>
+                <div>2,575%</div>
+            </div>
+            <div class="calc-step">
+                <div style="font-weight:600;">Total Kewajiban Zakat Perusahaan</div>
+                <div style="font-weight:600;">Rp 109.875.250</div>
+            </div>
+            <div class="calc-step calc-total" style="font-size:1.2rem;">
+                <div>Zakat Pemegang Saham Muslim (Porsi 80%)</div>
+                <div>Rp 87.900.200</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 4: Kuis -->
+    <div id="kuis" class="tab-content">
+        <div class="card">
+            <h2>Uji Pemahaman Anda</h2>
+            <p>Jawab pertanyaan berikut berdasarkan perhitungan dan teori yang telah Anda pelajari di modul ini.</p>
+            
+            <div class="quiz-container">
+                <div id="quiz-questions"></div>
+                <div class="quiz-controls" id="quiz-controls">
+                    <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()">Selanjutnya</button>
+                </div>
+                <div id="quiz-result" class="quiz-result"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
